@@ -2,7 +2,6 @@
 <html>
 
 <head>
-    <link rel="shortcut icon" href="favicon.ico" >
     <script>
         (function (d) {
             var config = {
@@ -45,42 +44,49 @@
 
         .crosscontainer {
             background: none;
-            width: 100%;
+            width: 100vw;
             height: fit-content;
             margin: 3% auto;
+            padding: 3% auto;
             z-index: 50;
             margin-bottom: 20%;
-         
+
         }
 
 
         div.crossA {
-            background-image: url('ninesword.png');
-            width: 520px;
-            height: 520px;
+            background-image: url('crossA.gif');
+            width: 500px;
+            height: 500px;
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
             z-index: 5;
             margin: 2%;
-            margin-left:10%;
-            margin-right:5%;
+            margin-left: 8.5%;
+            margin-right: 0%;
             float: left;
-            clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+            clip-path: polygon(0 0, 0 14%, 0 34%, 0 100%, 78% 100%, 78% 92%, 100% 92%, 100% 0, 91% 0, 91% 19%, 84% 19%, 84% 0);
+        }
+
+        div.crossA:hover {
+            clip-path: polygon(10% 0, 10% 30%, 0 30%, 0 92%, 25% 92%, 25% 100%, 100% 100%, 100% 38%, 82% 38%, 82% 30%, 100% 30%, 100% 0);
         }
 
         div.crossB {
-            background-image: url('roseburn.png');
-            width: 520px;
-            height: 520px;
+            background-image: url('crossB.gif');
+            width: 500px;
+            height: 500px;
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
             z-index: 5;
             margin: 2%;
+            margin-left: 8.5%;
             float: left;
-            clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+            clip-path: polygon(0 8%, 11% 8%, 11% 0, 100% 0, 100% 25%, 100% 44%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 94%, 0 94%);
         }
+        div.crossB:hover{clip-path: polygon(0 0, 0 40%, 15% 40%, 15% 49%, 0 49%, 0 100%, 83% 100%, 83% 80%, 90% 80%, 90% 100%, 100% 100%, 100% 0);}
 
         /*
         .out_block {
@@ -139,7 +145,7 @@
             color: #E2DE61;
             background: none;
             background-color: none;
-            font-size: 90px;
+            font-size: 8rem;
 
 
 
@@ -153,7 +159,7 @@
             color: #E2DE61;
             background: none;
             background-color: none;
-            font-size: 90px;
+            font-size: 8rem;
 
         }
 
@@ -220,7 +226,7 @@
         div.footer {
             width: 100%;
             position: fixed;
-            top:80%;
+            top: 80%;
             background: none;
             text-align: center;
             z-index: -1;
@@ -229,9 +235,10 @@
         div.footerpad {
             width: 100%;
             height: 20%;
-            top:100%;
+            top: 100%;
             background: none;
         }
+
         div.lineboxA {
             z-index: 100;
             background: none;
@@ -243,7 +250,7 @@
             border-left: 1px #000000 solid;
             border-right: none;
             border-bottom: none;
-    
+
             top: 0px;
             left: 15%;
 
@@ -260,7 +267,7 @@
             border-left: 1px #000000 solid;
             border-right: none;
             border-bottom: none;
-           
+
             top: 0px;
             left: 85%;
 
@@ -361,12 +368,12 @@
         div.info1 {
             background: #B7B7B7;
             border: black 1px solid;
-            width: 220px;
-            height: 100px;
+            width: 330px;
+            height: 150px;
             position: absolute;
             z-index: 100;
-            left: 66%;
-            top: 27.5%;
+            left: 64vw;
+            top: 29vh;
             animation: infobox 3s alternate infinite;
             animation-delay: 2s;
 
@@ -377,12 +384,12 @@
         div.info2 {
             background: #B7B7B7;
             border: black 1px solid;
-            width: 220px;
-            height: 100px;
+            width: 330px;
+            height: 150px;
             position: absolute;
             z-index: 180;
-            left: 72%;
-            top: 36.5%;
+            left: 70vw;
+            top: 40vh;
             animation: infobox 3s alternate infinite;
             animation-delay: 2.2s;
 
@@ -416,16 +423,16 @@
             font-family: meno-banner, serif;
             font-style: italic;
             font-weight: 100;
-            font-size: 15px;
+            font-size: 17px;
             padding: 4px
         }
 
         div.starpath {
-            width: 250px;
-            height: 250px;
+            width: 25vw;
+            height: 25vw;
             position: absolute;
-            left: 77%;
-            top: 90%;
+            left: 75vw;
+            top: 90vh;
             background: none;
             background-color: none;
             transform: rotate(5deg);
@@ -435,11 +442,11 @@
 
 
         div.coffin {
-            width: 120px;
-            height: 120px;
+            width: 20vh;
+            height: 20vh;
             position: fixed;
-            left: 100px;
-            top: 100px;
+            left: 15vh;
+            top: 20vh;
             z-index: 300;
             background-image: url('tag.svg');
             background-repeat: no-repeat;
@@ -448,6 +455,10 @@
             clip-path: polygon(25% 0%, 75% 0%, 100% 34%, 75% 100%, 25% 100%, 0 34%);
         }
 
+        /*div.coffin:hover {
+            background-image: url('hovertag.svg');
+        }
+        */
 
 
 
@@ -545,7 +556,7 @@
 
 
 
-        @media screen and (max-width:800px) {
+        @media screen and (max-width:1080px) {
             * {
                 padding: 0px
             }
@@ -554,69 +565,72 @@
 
 
             header {
-                font-size: 50px
+                font-size: 5.5rem
             }
 
             header2 {
-                font-size: 50px
+                font-size: 5.5rem
             }
 
+            /*
             h2 {
-                font-size: 15px;
+                font-size: 18px;
             }
 
             h3 {
-                font-size: 8px;
+                font-size: 10px;
             }
 
             h4 {
                 font-size: 8px;
             }
+            */
 
-            div.menubox {
-                font-size: 10px;
-            }
 
-            div.menuempty {
-                font-size: 10px;
-            }
 
             div.info1 {
-                width: 175px;
-                height: 85px;
-                left: 57%;
-                top: 22%;
+                width: 35vw;
+                left: 55vw;
+                top: 32vh;
             }
 
             div.info2 {
-                width: 175px;
-                height: 85px;
-                left: 62%;
-                top: 32%;
+                width: 35vw;
+                left: 60vw;
+                top: 44vh;
             }
 
-            infotext {
-                font-size: 12px;
-                padding: 1px;
-            }
+
 
             div.starpath {
-                left: 70%;
-                width: 150px;
-                height: 150px;
+                left: 70vw;
+                top: 90vh;
+                width: 25vh;
+                height: 25vh;
             }
 
-            div.coffin{width: 80px;height:80px;left:5%}
-       
-            div.crossA{width: 450px;height: 450px;margin:2% auto}
-          
-            div.crossB{width: 450px;height: 450px;margin:2% auto}
+            div.coffin {
+                width: 15vh;
+                height: 15vh;
+                left: 5%
+            }
+
+            div.crossA {
+                width: 65vw;
+                height: 65vw;
+                margin: 8vh auto
+            }
+
+            div.crossB {
+                width: 65vw;
+                height: 65vw;
+                margin: 8vh auto
+            }
 
 
-        }   
+        }
     </style>
 </head>
-
 
 
 <body>
@@ -627,7 +641,7 @@
         <div class=tophead>
             <header> CRYXTAL COFFiN</header>
         </div>
-        <h2>This website is under consturction</h2>
+        <h2>This is the website of Constance Chen</h2>
         <h3>constanziadesign@gmail.com</h3>
         <div class=menuempty>-</div>
         <div class=menubox>
@@ -688,8 +702,9 @@
 
         </div>
         <div class=crosscontainer>
-            <div class=crossA></div>
+            <div class=crossA> </div>
             <div class=crossB></div>
+
         </div>
         <div class=footerpad></div>
 
@@ -697,7 +712,9 @@
 
 
 
-<div class=footer>  <header2> CRYXTAL &nbsp;&nbsp;COFFiN</header2></div>
+    <div class=footer>
+        <header2> CRYXTAL &nbsp;&nbsp;COFFiN</header2>
+    </div>
     </div>
 
 </body>
