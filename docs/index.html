@@ -53,6 +53,9 @@
 
         }
 
+        div.coffin {
+            cursor: url("funny.png"),pointer;
+        }
 
         div.crossA {
             background-image: url('crossA.gif');
@@ -66,11 +69,12 @@
             margin-left: 8.5%;
             margin-right: 0%;
             float: left;
-            clip-path: polygon(0 0, 0 14%, 0 34%, 0 100%, 78% 100%, 78% 92%, 100% 92%, 100% 0, 91% 0, 91% 19%, 84% 19%, 84% 0);
+            clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0 100%, 0 35%);
         }
 
+      
         div.crossA:hover {
-            clip-path: polygon(10% 0, 10% 30%, 0 30%, 0 92%, 25% 92%, 25% 100%, 100% 100%, 100% 38%, 82% 38%, 82% 30%, 100% 30%, 100% 0);
+            clip-path: polygon(0% 0%, 100% 0, 100% 63%, 80% 100%, 0% 100%);
         }
 
         div.crossB {
@@ -84,9 +88,12 @@
             margin: 2%;
             margin-left: 8.5%;
             float: left;
-            clip-path: polygon(0 8%, 11% 8%, 11% 0, 100% 0, 100% 25%, 100% 44%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 94%, 0 94%);
+            clip-path: polygon(0% 0%, 100% 0, 100% 63%, 80% 100%, 0% 100%);
         }
-        div.crossB:hover{clip-path: polygon(0 0, 0 40%, 15% 40%, 15% 49%, 0 49%, 0 100%, 83% 100%, 83% 80%, 90% 80%, 90% 100%, 100% 100%, 100% 0);}
+
+        div.crossB:hover {
+            clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0 100%, 0 35%);
+        }
 
         /*
         .out_block {
@@ -183,6 +190,7 @@
 
         menu1 {
             font-family: meno-banner, serif;
+
             background: none;
             color: black;
             font-weight: 200;
@@ -215,11 +223,8 @@
         }
 
         div.tophead:hover {
-            width: fit-content;
-            margin: 20px auto;
-            padding: 0px;
+
             background-color: black;
-            text-align: center;
         }
 
 
@@ -277,6 +282,7 @@
 
         div.menubox {
             background: none;
+            font-size: 16pt;
             width: 20%;
             margin: 0px, auto;
             padding-top: 7px;
@@ -303,6 +309,7 @@
         div.menuempty {
             background: none;
             width: 20%;
+            font-size: 16pt;
             margin: 0px, auto;
             color: #B7B7B7;
             padding-top: 7px;
@@ -373,7 +380,7 @@
             position: absolute;
             z-index: 100;
             left: 64vw;
-            top: 29vh;
+            top: 32vh;
             animation: infobox 3s alternate infinite;
             animation-delay: 2s;
 
@@ -389,7 +396,7 @@
             position: absolute;
             z-index: 180;
             left: 70vw;
-            top: 40vh;
+            top: 41vh;
             animation: infobox 3s alternate infinite;
             animation-delay: 2.2s;
 
@@ -431,7 +438,7 @@
             width: 25vw;
             height: 25vw;
             position: absolute;
-            left: 75vw;
+            left: 72vw;
             top: 90vh;
             background: none;
             background-color: none;
@@ -549,7 +556,7 @@
         }
 
 
-   @media screen and (min-width:800px) and (orientation: portrait) {
+        @media screen and (min-width:800px) and (orientation: portrait) {
             * {
                 padding: 0px
             }
@@ -557,19 +564,17 @@
 
 
             div.tophead {
-                width: 100%;
+                width: 100vw;
                 height: 40vh;
                 margin: 0% auto;
-                left: 10%;
-                background-color: black;
+                background-color: none;
 
             }
 
             div.footer {
-                width: 100%;
+                width: 100vw;
                 height: 40vh;
                 margin: 0% auto;
-                left: 10%;
             }
 
             header {
@@ -592,8 +597,16 @@
             h4 {
                 font-size: 20px;
             }
-            div.menubox{width:30%;font-size: 30pt;}
-            div.menuempty{width:5%;font-size: 30pt;}
+
+            div.menubox {
+                width: 25vw;
+                font-size: 30pt;
+            }
+
+            div.menuempty {
+                width: 12.5vw;
+                font-size: 30pt;
+            }
 
 
             infotext {
@@ -601,24 +614,26 @@
             }
 
             div.info1 {
-                width: 35vh;
-                left: 55vw;
-                top: 32vh;
+                width: 35vw;
+                height:fit-content;
+                left: 40vw;
+                top: 50vh;
             }
 
             div.info2 {
-                width: 35vh;
-                left: 60vw;
-                top: 44vh;
+                width: 35vw;
+                height:fit-content;
+                left: 45vw;
+                top: 52vh;
             }
 
 
 
             div.starpath {
-                left: 60vw;
-                top: 90vh;
-                width: 40vh;
-                height: 40vh;
+                left: 50vw;
+                top: 95vh;
+                width: 42vh;
+                height: 42vh;
             }
 
             div.coffin {
@@ -628,21 +643,19 @@
             }
 
             div.crossA {
-                width: 60vh;
-                height: 60vh;
-                margin: 10vw auto;
+                width: 50vh;
+                height: 50vh;
+                margin: 00vw auto;
                 float: none;
             }
 
             div.crossB {
-                width: 60vh;
-                height: 60vh;
-                margin: 10vw auto;
+                width: 50vh;
+                height: 50vh;
+                margin: 00vw auto;
                 float: none;
             }
         }
-
-
 
 
 
