@@ -54,11 +54,8 @@
 
         }
 
-        /*  div.coffin {
-            cursor: url("funny.png"),crosshair;
-        }*/
-
         div.crossA {
+            background: transparent;
             background-image: url('crossA.gif');
             width: 520px;
             height: 520px;
@@ -79,6 +76,7 @@
         }
 
         div.crossB {
+            background: transparent;
             background-image: url('crossB.gif');
             width: 520px;
             height: 520px;
@@ -151,10 +149,10 @@
             padding: -5px;
             text-align: center;
             color: #E2DE61;
-            background: none;
-            background-color: none;
+            background: transparent;
+            background-color: transparent;
             font-size: 11vw;
-            
+
 
 
 
@@ -168,7 +166,7 @@
             color: #E2DE61;
             background: none;
             background-color: none;
-            font-size:11vw;
+            font-size: 11vw;
 
         }
 
@@ -218,7 +216,7 @@
 
         div.tophead {
             width: fit-content;
-            top:42vh;
+            top: 42vh;
             padding: 0px;
             left: 1%;
             background: none;
@@ -227,19 +225,41 @@
             z-index: 300;
         }
 
-        div.tophead:hover {
+        header:hover {
 
             background-color: black;
         }
 
+        div.goto {
+            background: url('arrowstuff.svg') no-repeat;
+            width: fit-content;
+            height: fit-content;
+            margin-left: 10vw;
+            margin-top: 10vh;
+            text-align: center;float: left;
+            background-position: center;
+            background-size: cover;
+        }
+
+        gototext {
+            font-size: 7vw;
+            color: white;
+            font-family: AB-Digicomb, sans-serif;
+            background: transparent;
+        }
+
+        gototext:hover {
+            font-family: Amador, sans-serif;
+
+        }
 
         div.footer {
             width: 100%;
-            position:fixed;
+            position: fixed;
             top: 82%;
             background: none;
             text-align: center;
-            z-index:-1;
+            z-index: -1;
         }
 
         div.footerpad {
@@ -445,8 +465,8 @@
             position: fixed;
             left: 72vw;
             top: 62vh;
-            background: none;
-            background-color: none;
+            background: transparent;
+            background-color: transparent;
             transform: rotate(5deg);
             z-index: -2;
         }
@@ -494,8 +514,8 @@
         path.star1 {
             fill: #e2de61;
             animation: star1 3s alternate infinite;
-            background: none;
-            background-color: none;
+            background: transparent;
+            background-color: transparent;
         }
 
 
@@ -523,16 +543,22 @@
 
 
 
-        @keyframes formark {
-            from {
-                color: black;
-            }
-
-            to {
+        @keyframes headercolor {
+            0% {
                 color: #E2DE61;
-
             }
 
+            33.3% {
+                color: #E2DE61;
+            }
+
+            66.66% {
+                color: #76D9F4;
+            }
+
+            100% {
+                color: #FF7847
+            }
         }
 
         @keyframes infobox {
@@ -578,8 +604,7 @@
         }
 
 
-       
-        @media screen and (min-width:800px) and (orientation: portrait) {
+        @media screen and (min-width:400px) and (orientation: portrait) {
             * {
                 padding: 0px
             }
@@ -604,7 +629,10 @@
             }
 
             header {
-                font-size: 11.5rem;
+                font-size: 11.7rem;
+                animation: headercolor 3s alternate infinite;
+
+
             }
 
             header2 {
@@ -666,6 +694,7 @@
                 width: 25vh;
                 height: 25vh;
                 display: none;
+
             }
 
             div.coffin {
@@ -691,16 +720,28 @@
                 margin-bottom: 0%;
                 float: none;
             }
-  div.welcome {
-                position:absolute;
+
+            div.welcome {
+                position: absolute;
                 top: 25vh;
                 opacity: 100;
                 width: 24vh;
                 left: 2vw;
-                padding-left:0%;
-                z-index:3;
+                padding-left: 0%;
+                z-index: 3;
             }
+
+            div.goto {
+            margin-left: 10vw;
+            margin-top: 4vh;
+            float: none;
         }
+
+        gototext {
+            font-size:8.6rem;
+        }
+        }
+
 
         @media screen and (max-width:800px) {
             * {
@@ -783,6 +824,8 @@
                 margin: 8vh auto;
                 float: none;
             }
+            div.goto{ margin-top:4vh;}
+            gototext{font-size: 10vh;}
 
 
         }
@@ -791,7 +834,6 @@
 
 
 <body>
-
     <div class=content>
 
         <div class=scroll-area>
@@ -807,14 +849,18 @@
         <div class=lineboxA></div>
         <div class=lineboxB></div>
         <div class=tophead>
-            <header> CRYXTAL COFFiN</header>
+            <header> CRYXTAL COFFiN
+            </header>
+            <div class=goto>
+                <gototext>WORKS</gototext>
+            </div>
+            <div class=goto>
+                <gototext>ABOUT</gototext>
+            </div>
         </div>
         <h2># ! This website is under construction ! #</h2>
         <h3>constanziadesign@gmail.com</h3>
-     
 
-
-        
 
         <div class=info1>
             <div class=infotop>
@@ -839,13 +885,14 @@
 
         </div>
         <div class=coffin> </div>
-        <div class=welcome><img src='welcome.svg'></div>
+        <div class=welcome><img src='superwelcome.svg' style="background: transparent;"></div>
 
         <div class=starpath>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 363.53 314.82">
 
                 <path class="star1"
-                    d="M272.64,0C199.07,127.43,164.45,127.43,90.88,0,164.45,127.43,147.14,157.41,0,157.41c147.14,0,164.45,30,90.88,157.41,73.57-127.43,108.19-127.43,181.76,0-73.57-127.43-56.26-157.41,90.89-157.41C216.38,157.41,199.07,127.43,272.64,0Z" />
+                    d="M272.64,0C199.07,127.43,164.45,127.43,90.88,0,164.45,127.43,147.14,157.41,0,157.41c147.14,0,164.45,30,90.88,157.41,73.57-127.43,108.19-127.43,181.76,0-73.57-127.43-56.26-157.41,90.89-157.41C216.38,157.41,199.07,127.43,272.64,0Z"
+                    style="background: transparent;" />
             </svg>
 
         </div>
@@ -853,7 +900,9 @@
             <div class=crossA> </div>
             <div class=crossB></div>
 
+
         </div>
+
         <div class=footerpad></div>
 
     </div>
