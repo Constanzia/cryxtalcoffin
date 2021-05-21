@@ -556,10 +556,6 @@
                 padding: 0px
             }
 
-
-
-
-
             div.tophead {
                 width: 100%;
                 height: 20vh;
@@ -603,9 +599,12 @@
             }
 
             div.menuempty {
-               display: none;
+                display: none;
             }
-            div.scroll-area {height:4.8vh}
+
+            div.scroll-area {
+                height: 4.8vh
+            }
 
 
             infotext {
@@ -613,34 +612,35 @@
             }
 
             div.info1 {
-                width: 430px;
-                height:320px;
+                width: 440px;
+                height: 320px;
                 left: 39%;
                 top: 38vh;
             }
 
             div.info2 {
-                width: 430px;
-                height:320px;
+                width: 440px;
+                height: 320px;
                 left: 47%;
-                top: 50vh;
+                top: 52vh;
             }
 
 
 
-           
+
             div.starpath {
                 left: 45vw;
                 top: 125vh;
                 width: 25vh;
                 height: 25vh;
+                display: none;
             }
 
             div.coffin {
                 width: 13vh;
                 height: 13vh;
                 left: 4vh;
-                top:8vh;
+                top: 8vh;
             }
 
             div.crossA {
@@ -659,7 +659,16 @@
                 margin-bottom: 0%;
                 float: none;
             }
+
+            div.welcome {
+                position: fixed;
+                top: 80vh;
+                opacity: 100;
+                width: 25vh;
+                left: 2vw;
+            }
         }
+
 
 
         @media screen and (max-width:800px) {
@@ -796,7 +805,7 @@
 
         </div>
         <div class=coffin></div>
-
+      <div class=welcome><img src='welcome.svg'></div>
         <div class=starpath>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 363.53 314.82">
 
