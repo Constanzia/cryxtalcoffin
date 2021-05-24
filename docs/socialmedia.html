@@ -34,20 +34,14 @@
         }
 
         * {
-            padding-left: 0
+            outline: none;
         }
 
-        * {
-            padding-right: 0
-        }
-
-        * {
-            padding-top: 0px
-        }
 
         a {
             background: transparent;
             text-decoration: none;
+            color: unset;
         }
 
 
@@ -85,9 +79,7 @@
             position: fixed;
             top: 1%;
             left: 25vw;
-            width: 1%;
-            height: 1%;
-            opacity: 0%;
+            display: none;
             overflow: scroll;
 
         }
@@ -95,28 +87,34 @@
         .post::after {
             background: transparent;
             color: white;
-            font-size: 20px;
+            text-align: left;
+            font-size: 2.2vh;
             font-family: century-gothic;
             font-style: italic;
             font-weight: 200;
             width: 16vw;
             position: fixed;
-            top: 70vh;
-            left: 70vw;
+            top: 72vh;
+            left: 68vw;
             opacity: 100%;
             content: attr(data-content);
         }
 
-        .posttitle:focus .post {
+        .post:target {
             width: fit-content;
             height: fit-content;
             opacity: 100%;
             color: black;
             background: transparent;
+            display: block;
 
         }
 
         .posttitle:focus {
+            color: #E2DE61;
+        }
+
+        .posttitle:hover {
             color: #E2DE61;
         }
 
@@ -134,7 +132,7 @@
 
         .horizontal {
             background: transparent;
-            width: 60vw;
+            width: 57vw;
         }
 
         .postimg {
@@ -145,6 +143,10 @@
             background: transparent;
         }
 
+        .thanks {
+            width: 65vw;
+            text-align: left;
+        }
 
 
         header {
@@ -256,7 +258,7 @@
             color: #E2DE61;
             font-family: Amador, sans-serif;
             background-color: transparent;
-            background: linear-gradient(180deg, rgba(255, 255, 255, 0) 50% ,#B7B7B7 50%);
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, #B7B7B7 50%);
         }
 
 
@@ -525,12 +527,19 @@
 
 
 
-        @media screen and (min-width:800px) and (orientation: portrait) {
+        @media screen and (min-width:300px) and (orientation: portrait) {
             * {
                 padding: 0px
             }
 
-
+.thanks{padding-top:60%}
+.center{padding-top: 60%}
+.post:target{top:45%;position: absolute;}
+.post::after{font-size: 35pt; left:60%;}
+.vertical{width:65vw}
+.horizontal{width:65vw}
+.square{width:65vw}
+.posttitle{float: left;}
 
 
 
@@ -572,22 +581,6 @@
 
 
 
-            div.scroll-area {
-                height: 4.8vh
-            }
-
-
-            infotext {
-                font-size: 32pt
-            }
-
-            div.info1 {
-                width: 440px;
-                height: 300px;
-                left: 50%;
-                top: 105vh;
-            }
-
 
 
 
@@ -622,17 +615,6 @@
             }
 
 
-            div.aboutme {
-                width: 75%;
-                font-size: 42px;
-                padding-left: 12%;
-                padding-top: 30vh;
-                padding-bottom: 75vh;
-            }
-
-            aboutbold {
-                font-size: 46px
-            }
         }
 
 
@@ -641,10 +623,13 @@
                 padding: 0px
             }
 
-            .posttitle:focus .post {
-                width: 65vw;
-                left: 15vw
+            .post:target{
+               width:66vw;
+                left: 22vw;
             }
+            .vertical{width:60vw}
+            .horizontal{width:60vw}
+            .square{width:60vw}
 
             .post::after {
                 font-size: 14px;
@@ -749,7 +734,11 @@
 
 <body>
     <div class=content style="background-color: transparent;">
-<h3 style="color:#E2DE61;background: transparent;"><br><br><br>Created during<br> my Internship in <br>The Hoffman Agency.<br><br>Special Thanks to <br>Art Director<br>Andrew Wu<br>and<br>Head of Digital<br>Nicolas Chen.</h3>
+        <div class=thanks>
+            <h3 style="color:#E2DE61;background: transparent;"><br><br><br>Created during<br> my Internship in <br>The
+                Hoffman Agency.<br><br>Special Thanks to <br>Art Director<br>Andrew Wu<br>and<br>Head of
+                Digital<br>Nicolas Chen.</h3>
+        </div>
         <div class="foucustestA" tabindex="-1">
             <div class="foucustestB"></div>
         </div>
@@ -786,7 +775,7 @@
         </div>
     </div>
 
-    <a href="socialmedia.html">
+    <a href="#">
         <div class=coffin> </div>
     </a>
 
@@ -800,66 +789,74 @@
 
     </div>
     <div class="center">
-        <div class="posttitle" tabindex="-1">
-            <h2>Bunny&Moon</h2>
-            <div class="post" data-content="Mid-Autumn animation for the Hoffman Agency">
-                <div class="postimg"><video src="SMPmoon2020.mp4" autoplay muted loop height="fit-content" width="100%"
-                        class="square"></div>
-            </div>
+        <a href="#bunnymoon">
+            <div class="posttitle" tabindex="-1">
+                <h2>Bunny&Moon</h2>
+        </a>
+        <div class="post" data-content="Mid-Autumn animation for the Hoffman Agency" id="bunnymoon">
+            <div class="postimg"><video src="SMPmoon2020.mp4" autoplay muted loop height="fit-content" width="100%"
+                    class="square"></div>
         </div>
-        <div class="posttitle" tabindex="-1">
-            <h2>ScanTheVillage</h2>
-            <div class="post" data-content="animated Wechat QR code footer for infineon CN">
-                <div class="postimg"><video src="SMPinfineonQRcode.mp4" autoplay muted loop height="fit-content"
-                        width="100%" class="vertical"></div>
-            </div>
+    </div>
+    <a href="#scanthevillage">
+    <div class="posttitle" tabindex="-1">
+        <h2>ScanTheVillage</h2></a>
+        <div class="post" data-content="animated Wechat QR code footer for infineon CN" id="scanthevillage">
+            <div class="postimg"><video src="SMPinfineonQRcode.mp4" autoplay muted loop height="fit-content"
+                    width="100%" class="vertical"></div>
         </div>
-        <div class="posttitle" tabindex="-1">
-            <h2>SlotMachine</h2>
-            <div class="post" data-content="1M Smile Instagram post for Invisalign SG">
-                <div class="postimg"><video src="SMPslotmachine.mp4" autoplay muted loop height="fit-content"
-                        width="100%" class="square"></div>
-            </div>
+    </div>
+    <a href="#slotmachine">
+    <div class="posttitle" tabindex="-1">
+        <h2>SlotMachine</h2></a>
+        <div class="post" data-content="1M Smile Instagram post for Invisalign SG" id="slotmachine">
+            <div class="postimg"><video src="SMPslotmachine.mp4" autoplay muted loop height="fit-content" width="100%"
+                    class="square"></div>
         </div>
+    </div>
+<a href="#chipsox">
+    <div class="posttitle" tabindex="-1">
+        <h2>Chips&Ox</h2></a>
+        <div class="post" data-content="Chinese New Year Wechat Post for ASML" id="chipsox">
+            <div class="postimg"><img src="SMPASMLCNY.gif" class="vertical"></div>
+        </div>
+    </div>
+    <a href="#flyingdots"><div class="posttitle" tabindex="-1">
+       <h2>FlyingDots</h2></a>
+        <div class="post" data-content="animated Wechat QRcode footer for Celo" id="flyingdots">
+            <div class="postimg"><img src="SMPcelofooter.gif" class="square"></div>
+        </div>
+    </div>
 
-        <div class="posttitle" tabindex="-1">
-            <h2>Chips&Ox</h2>
-            <div class="post" data-content="Chinese New Year Wechat Post for ASML">
-                <div class="postimg"><img src="SMPASMLCNY.gif" class="vertical"></div>
-            </div>
+    <a href="#digitalwaves"><div class="posttitle" tabindex="-1">
+        <h2>DigitalWaves</h2></a>
+        <div class="post" data-content="Zoom background for the Hoffman Agency" id="digitalwaves">
+            <div class="postimg"><video src="SMPhoffmanBG.mp4" autoplay muted loop height="fit-content" width="100%"
+                    class="horizontal"></div>
         </div>
-        <div class="posttitle" tabindex="-1">
-            <h2>FlyingDots</h2>
-            <div class="post" data-content="animated Wechat QRcode footer for Celo">
-                <div class="postimg"><img src="SMPcelofooter.gif" class="square"></div>
-            </div>
-        </div>
-
-        <div class="posttitle" tabindex="-1">
-            <h2>DigitalWaves</h2>
-            <div class="post" data-content="Zoom background for the Hoffman Agency">
-                <div class="postimg"><video src="SMPhoffmanBG.mp4" autoplay muted loop height="fit-content"
-                        width="100%" class="horizontal"></div>
-            </div>
-        </div>
+    </div>
+    <a href="#chipsdeer">
         <div class="posttitle" tabindex="-1">
             <h2>Chips&Deer</h2>
-            <div class="post" data-content="Christmas Wechat post for Infineon">
-                <div class="postimg"><img src="SMPinfeneonxmas.png" class="vertical"></div>
-            </div>
-        </div>
+    </a>
+    <div class="post" data-content="Christmas Wechat post for Infineon" id="chipsdeer">
+        <div class="postimg"><img src="SMPinfeneonxmas.png" class="vertical"></div>
+    </div>
+    </div>
+    <a href="#celebration">
         <div class="posttitle" tabindex="-1">
             <h2>Celebration</h2>
-            <div class="post" data-content="Facebook posts for LCY Education Foundation">
-                <div class="postimg"><img src="SMPlcymix.png" class="horizontal"></div>
-            </div>
-        </div>
+    </a>
+    <div class="post" data-content="Facebook posts for LCY Education Foundation" id="celebration">
+        <div class="postimg"><img src="SMPlcymix.png" class="horizontal"></div>
+    </div>
+    </div>
 
     </div>
 
-   
 
-    <div class=footerpad>last updated May.24 2021</div>
+
+    <div class=footerpad style="color: white;">last updated May.24 2021</div>
     </div>
 
 
