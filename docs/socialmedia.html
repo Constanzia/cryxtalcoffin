@@ -527,29 +527,33 @@
 
 
 
-        @media screen and (min-width:800px) and (orientation: portrait) {
+         @media screen and (min-width:800px) and (orientation: portrait) {
             * {
                 padding: 0px
             }
 
             .thanks {
                 padding-top: 30%;
-                padding-left:60%;
+                padding-left:40%;
+                position: fixed;
             }
 
             .center {
-                padding-top: 60%;
+                padding-top: 57%;
             }
 
             .post:target {
-                top: 25%;
-                left:20vw;
+                top: 20%;
+                left:25vw;
                 position: absolute;
             }
 
             .post::after {
-                font-size: 22pt;
-                left: 60%;
+                font-size: 23pt;
+                left: 55vw;
+                top:75vh;
+                width: 23vw;
+
             }
 
             .vertical {
@@ -595,10 +599,12 @@
 
             h2 {
                 font-size: 35px;
+                font-weight: 600;
+                font-style: normal;
             }
 
             h3 {
-                font-size: 34px;
+                font-size: 30px;
             }
 
             h4 {
